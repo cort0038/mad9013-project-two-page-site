@@ -340,6 +340,10 @@ select {
     align-items: var(--vAlign);
   }
 
+  .banner__content {
+    text-align: left;
+  }
+
   .banner__text {
     font-size: 1.2rem;
   }
@@ -351,6 +355,10 @@ select {
 @media only screen and (min-width: 60em) {
   .banner__title {
     font-size: 3.157rem;
+  }
+
+  .banner__content {
+    text-align: left;
   }
 
   .banner .container {
@@ -376,15 +384,14 @@ select {
 
 .card-group {
   background-color: #def4e9;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding: 3rem 1rem 4rem 1rem;
 }
 
 .card__content {
   padding-bottom: 1rem;
-  align-items: center;
   display: flex;
   flex-direction: column;
+  text-align: center;
 }
 
 .card {
@@ -394,7 +401,6 @@ select {
   overflow: hidden;
   text-decoration: none;
   color: inherit;
-  text-align: center;
 }
 
 .card__title {
@@ -424,7 +430,7 @@ select {
   padding: 0.5rem 1rem;
   margin: 0;
   color: #000;
-  justify-content: center;
+  /* justify-content: center; */
 }
 
 /* ------ Medium Size Screens ------ */
@@ -432,6 +438,11 @@ select {
 @media only screen and (min-width: 45em) {
   .card-group .container {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card__content--left {
+    /* align-items: left;*/
+    text-align: left;
   }
 
   .card__title {
@@ -453,6 +464,10 @@ select {
 
   .card__title {
     font-size: 1.563rem;
+  }
+
+  .card {
+    align-items: left;
   }
 
   .card-group__title {
