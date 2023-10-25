@@ -206,6 +206,7 @@ select {
 
 /* ---------- Nav Default Styles ---------- */
 
+
 .navbar {
   background-color: #000;
   color: #fff;
@@ -514,6 +515,7 @@ select {
 @media only screen and (min-width: 60em) {
   .image-content .container {
     grid-template-columns: 1fr 1fr;
+    text-align: left;
   }
 
   .image-content__title {
