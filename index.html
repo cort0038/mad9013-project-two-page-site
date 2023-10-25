@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="CSS/main.css" />
+    <link rel="stylesheet" href=".CSS/main.css" />
     <title>Document</title>
   </head>
   <body>
@@ -11,20 +11,19 @@
 
     <header class="navbar">
       <div class="container">
-        <a href="/" class="navbar__logo">
+        <a href="./" class="navbar__logo">
           <img
             src="./images/logo-ac.svg"
             alt="Adventure Co-Operative Logo"
             class="navbar__icon"
           />
-          <!-- <span class="nav__title">MAD9013</span> -->
         </a>
         <nav>
           <ul class="navbar__list">
             <li><a href="#" class="navbar__link">About</a></li>
             <li><a href="#" class="navbar__link">Blog</a></li>
             <li><a href="#" class="navbar__link">Download</a></li>
-            <li><a href="#" class="navbar__link">Sign Up</a></li>
+            <li><a href="#" class="navbar__link navbar__link--details">Sign Up</a></li>
           </ul>
         </nav>
       </div>
@@ -55,45 +54,34 @@
         <a class="card grow" href="#">
           <!-- Card #1 -->
           <div class="card__image">
-            <img
-              src="images/card-character.svg"
-              alt="A sitting siberian husky dog"
-            />
+            <img src="images/card-character.svg" alt="Character icon" />
           </div>
           <div class="card__content">
-            <h2 class="card__title">Card Title</h2>
+            <h2 class="card__title">Create a character!</h2>
             <p class="card__text">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Get started with your very first character.
             </p>
           </div>
         </a>
         <a class="card grow" href="#">
           <!-- Card #2 -->
           <div class="card__image">
-            <img
-              src="images/card-party.svg"
-              alt="A sitting siberian husky dog"
-            />
+            <img src="images/card-party.svg" alt="Party icon" />
           </div>
           <div class="card__content">
-            <h2 class="card__title">Card Title</h2>
-            <p class="card__text">
-              LLorem, ipsum dolor sit amet consectetur adipisicing elit.
-            </p>
+            <h2 class="card__title">Form a party!</h2>
+            <p class="card__text">Connect with friends and team up.</p>
           </div>
         </a>
         <a class="card grow" href="#">
           <!-- Card #3 -->
           <div class="card__image">
-            <img
-              src="images/card-items.svg"
-              alt="A sitting siberian husky dog"
-            />
+            <img src="images/card-items.svg" alt="Items icon" />
           </div>
           <div class="card__content">
-            <h2 class="card__title">Card Title</h2>
+            <h2 class="card__title">Find an item!</h2>
             <p class="card__text">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Add fantastic items to boost your character.
             </p>
           </div>
         </a>
@@ -107,21 +95,63 @@
     <section class="image-content">
       <div class="container">
         <div class="image-content__image">
-          <img src="images/about.jpg" alt="A nice dock on the lake" />
+          <img src="images/about.jpg" alt="Knights with armor riding horses" />
         </div>
 
         <div class="image-content__content">
-          <h2 class="image-content__title">Heading 2</h2>
+          <h2 class="image-content__title">About Adventure Co.</h2>
           <p class="image-content__text">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi nemo
-            consequuntur a iste? Maxime recusandae minima labore! Voluptatibus
-            quisquam vero modi fuga voluptates minus dicta laudantium placeat!
-            Nulla, sunt autem.
+            Adventure Co. is a cooperative storytelling companion for D&D that
+            uses your imagination and invites you to adventure, battle,
+            discover, and complete epic quests with your friends through an
+            immersive RPG experience. Your first adventure is only a dice roll
+            away!
           </p>
           <a href="#" class="btn push-on-hover">Learn more</a>
         </div>
       </div>
     </section>
+
+    <!-- RECENT BLOG POSTS -->
+
+    <section class="card-group">
+      <!-- Recent blog posts start -->
+      <div class="container">
+        <div class="card-group__title">
+          <h2>Recent Blog Posts</h2>
+        </div>
+        <a class="card grow" href="blog-post.html">
+          <!-- Post/Card #1 -->
+          <div class="card__content">
+            <h3 class="card__title">
+              One-Shot Adventures: What They Are, Why We Love Them, and
+              Recommendations
+            </h3>
+            <p class="card__text">By Mike Bernier</p>
+          </div>
+        </a>
+        <a class="card grow" href="#">
+          <!-- Post/Card #2 -->
+          <div class="card__content">
+            <h3 class="card__title">
+              5 Tips for Running the Death House One-Shot From Curse of Strahd
+            </h3>
+            <p class="card__text">by Jeremy Blum</p>
+          </div>
+        </a>
+        <a class="card grow" href="#">
+          <!-- Post/Card #3 -->
+          <div class="card__content">
+            <h3 class="card__title">
+              How to Mashup D&D Sourcebooks for Versatile Storytelling
+            </h3>
+            <p class="card__text">by Riley Silverman</p>
+          </div>
+        </a>
+      </div>
+      <!-- End of container -->
+    </section>
+    <!-- End of post/card group -->
 
     <!-- FOOTER -->
 
