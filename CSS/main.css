@@ -312,6 +312,7 @@ select {
 
 .banner__content {
   width: min(41em, 100%);
+  text-align: center;
 }
 
 .banner__title {
@@ -468,6 +469,7 @@ select {
   align-items: center;
   display: grid;
   gap: 3rem;
+  text-align: center;
 }
 
 .image-content__image {
