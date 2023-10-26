@@ -14,7 +14,7 @@
 /* Set core root defaults */
 html {
   line-height: 1.5;
-  font-family: sans-serif, Roboto, system-ui, -apple-system, BlinkMacSystemFont,
+  font-family: Roboto, sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue";
 }
 
@@ -55,13 +55,13 @@ ol[role="list"] {
 /* A elements that don't have a class get default styles */
 a {
   text-decoration-skip-ink: auto;
-  color: #36bf7f;
+  color: #33a06d;
   text-decoration: none;
 }
 
 a:hover,
 a:focus-visible {
-  color: #d96666;
+  color: #75d3a7;
 }
 
 nav {
@@ -207,6 +207,60 @@ select {
   animation-iteration-count: 1;
 }
 
+/* FONT SIZES */
+html {font-size: 100%;} /*16px*/
+p {margin-bottom: 1rem;}
+h1, h2, h3, h4, h5 {
+  font-weight: 700;
+  line-height: 1.3;
+}
+h1 {
+  margin-top: 0;
+  font-size: 1.802rem;
+}
+h2 {font-size: 1.402rem;}
+h3 {font-size: 1.224rem;}
+h4 {font-size: 1.166rem;
+  font-weight: 400;}
+h5 {font-size: 1.125rem;}
+small, .text_small {font-size: 0.889rem;}
+
+@media only screen and (min-width: 45em) {
+  p {margin-bottom: 1rem;}
+  h1, h2, h3, h4, h5 {
+    line-height: 1.3;
+}
+  h1 {
+    margin-top: 0;
+    font-size: 2.074rem;
+}
+  h2 {font-size: 1.528rem;}
+  h3 {font-size: 1.24rem;}
+  h4 {font-size: 1.123rem;
+    font-weight: 400;}
+  h5 {font-size: 1rem;}
+  small, .text_small {font-size: 0.833rem;}
+}
+
+@media only screen and (min-width: 60em) {
+  p {margin-bottom: 1rem;
+  font-size: 1rem;}
+  h1, h2, h3, h4, h5 {
+    line-height: 1.3;
+}
+
+  h1 {
+    margin-top: 0;
+    font-size: 3.052rem;
+}
+
+  h2 {font-size: 1.753rem;}
+  h3 {font-size: 1.363rem;}
+  h4 {font-size: 1.25rem; font-weight: 400;}
+  h5 {font-size: 1rem;}
+  small, .text_small {font-size: 0.8rem;}
+  }
+
 /* ---------- NAVBAR ---------- */
 
 .navbar {
@@ -253,12 +307,6 @@ select {
 
 .navbar__link:focus {
   outline: none;
-}
-
-.navbar__title {
-  font-size: 1.525rem;
-  font-weight: bold;
-  line-height: 1.3;
 }
 
 /* Medium to Large Screens Sizes */
@@ -314,16 +362,10 @@ select {
 .banner__content {
   width: min(45em, 100%);
   text-align: center;
-}
-
-.banner__title {
-  font-size: 1.777rem;
-  line-height: 1.3;
-  color: #ffffff;
+  color: #fff;
 }
 
 .banner__text {
-  font-size: 1.1093rem;
   color: #d3d3d3;
 }
 
@@ -339,9 +381,6 @@ select {
 
 /* ------ Medium Size Screens ------ */
 @media only screen and (min-width: 45em) {
-  .banner__title {
-    font-size: 2.369rem;
-  }
 
   .banner .container {
     display: flex;
@@ -353,16 +392,10 @@ select {
     text-align: left;
   }
 
-  .banner__text {
-    font-size: 1.2rem;
-  }
 }
 
 /* ------ Large Size Screens ------ */
 @media only screen and (min-width: 60em) {
-  .banner__title {
-    font-size: 3.157rem;
-  }
 
   .banner__content {
     text-align: left;
@@ -372,10 +405,6 @@ select {
     display: flex;
     min-height: var(--height);
     align-items: var(--vAlign);
-  }
-  .banner__text,
-  .btn--large {
-    font-size: 1.3rem;
   }
 }
 
@@ -387,6 +416,10 @@ select {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 1rem;
+}
+
+.card-group__title {
+  text-align: center;
 }
 
 .card-group {
@@ -406,7 +439,6 @@ select {
   border-radius: 0.5rem;
   box-shadow: 0 0.25rem 0.5rem #0002, 0 0.25rem 0.75rem #0002;
   overflow: hidden;
-  text-decoration: none;
   color: inherit;
 }
 
@@ -414,7 +446,6 @@ select {
   color: #490303;
   padding: 0.5rem 1rem;
   margin: 0;
-  font-size: 1.266rem;
   line-height: 1.3;
   padding-top: 1rem;
   padding-bottom: 0;
@@ -423,7 +454,7 @@ select {
 .card__image {
   display: flex;
   justify-content: center;
-  background-color: #0e0a1b;
+  background-color: #1c0221;
 }
 
 .card__image img {
@@ -449,33 +480,19 @@ select {
     text-align: left;
   }
 
-  .card__title {
-    font-size: 1.44rem;
-  }
-
   .card-group__title {
-    font-size: 1.728rem;
     grid-column: 1/3;
   }
+
 }
 
 /* ------ Large Size Screens ------ */
 @media only screen and (min-width: 60em) {
   .card-group .container {
     grid-template-columns: repeat(3, 1fr);
-    display: grid;
-  }
-
-  .card__title {
-    font-size: 1.563rem;
-  }
-
-  .card {
-    align-items: left;
   }
 
   .card-group__title {
-    font-size: 1.953rem;
     grid-column: 1/4;
   }
 }
@@ -494,15 +511,12 @@ select {
 .split-image__image {
   aspect-ratio: 1 / 1;
   display: flex;
+  border-radius: 1rem;
+  overflow: hidden;
 }
 
 .split-image__image img {
   object-fit: cover;
-}
-
-.split-image__title {
-  font-size: 1.756rem;
-  line-height: 1.3;
 }
 
 /* ------ Medium Size Screens ------ */
@@ -510,17 +524,6 @@ select {
   .split-image .container {
     grid-template-columns: 1fr 1fr;
     text-align: left;
-  }
-
-  .split-image__title {
-    font-size: 2.069rem;
-  }
-}
-
-/* ------ Large Size Screens ------ */
-@media only screen and (min-width: 60em) {
-  .split-image__title {
-    font-size: 2.444rem;
   }
 }
 
@@ -544,12 +547,6 @@ select {
   width: 10rem;
 }
 
-.footer__title {
-  font-size: 1.525rem;
-  font-weight: bold;
-  line-height: 1.3;
-}
-
 .footer__list {
   padding-left: 1.5rem;
   margin: 0;
@@ -567,7 +564,6 @@ select {
   flex-direction: row;
   margin: 0;
   padding-left: 1.5rem;
-  font-size: 0.856rem;
 }
 
 .footer__link,
@@ -622,13 +618,13 @@ select {
 
 .standout__title {
   border-bottom: 0.2rem #005b41 solid;
-  border-image: linear-gradient(to right, #000 20%, transparent 20%) 100% 1;
+  border-image: linear-gradient(to right, #005b41 20%, transparent 20%) 100% 1;
   padding: 1rem 0 0 1rem;
 }
 
 .article__subtitle {
   border-bottom: 0.2rem #005b41 solid;
-  border-image: linear-gradient(to right, #000 20%, transparent 20%) 100% 1;
+  border-image: linear-gradient(to right, #005b41 20%, transparent 20%) 100% 1;
   padding: 1rem 0 0 0;
 }
 
@@ -637,6 +633,14 @@ select {
   border-radius: 1rem;
   border-bottom: 0.2rem #005b41 solid;
   padding: 1rem;
+}
+
+.article__body img {
+  border-radius: 1rem;
+}
+
+.article__body h3 {
+  color: #490303;
 }
 
 .article__content {
@@ -648,10 +652,20 @@ select {
 .related--articles {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
   height: fit-content;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   padding: 1rem;
+  border-radius: 1rem;
+  background-color: #ece6e6;
+  border: #000 0.3rem solid;
+}
+
+.tag {
+  background-color: #005b41;
+  color: #fff;
+  padding: 0.2rem;
+  border-radius: 0.2rem;
+  margin-bottom: 0.5rem;
 }
 
 @media only screen and (min-width: 45em) {
@@ -660,10 +674,6 @@ select {
 }
 
 .related--articles {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  flex-wrap: wrap;
   margin-top: 2rem;
   position: sticky;
   position: -webkit-sticky;
