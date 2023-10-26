@@ -56,6 +56,7 @@ ol[role="list"] {
 a {
   text-decoration-skip-ink: auto;
   color: #36bf7f;
+  text-decoration: none;
 }
 
 a:hover,
@@ -119,7 +120,7 @@ select {
   width: min(45em, 100%);
 }
 
-/* ---------- Default Buttons ---------- */
+/* ---------- Buttons ---------- */
 
 .btn {
   display: inline-block;
@@ -154,13 +155,14 @@ select {
   border-color: #75d3a7;
   color: #000;
 }
-/* CSS EFFECTS */
 
-.grow {
+/* Effects & Animations */
+
+.grow-effect {
   transition: all 0.1s ease-in-out;
 }
 
-.grow:hover {
+.grow-effect:hover {
   transform: scale(1.02);
 }
 
@@ -184,6 +186,7 @@ select {
     transform: scale(1);
   }
 }
+
 .push-on-hover {
   display: inline-block;
   vertical-align: middle;
@@ -204,8 +207,7 @@ select {
   animation-iteration-count: 1;
 }
 
-/* ---------- Nav Default Styles ---------- */
-
+/* ---------- NAVBAR ---------- */
 
 .navbar {
   background-color: #000;
@@ -257,11 +259,9 @@ select {
   font-size: 1.525rem;
   font-weight: bold;
   line-height: 1.3;
-  /*  */
 }
 
 /* Medium to Large Screens Sizes */
-/* ---------- Nav Default Styles ---------- */
 
 @media only screen and (min-width: 45em) {
   .navbar .container {
@@ -289,7 +289,7 @@ select {
   }
 }
 
-/* ---------- BANNER STYLES ---------- */
+/* ---------- BANNER ---------- */
 
 .banner {
   background-image: linear-gradient(
@@ -312,7 +312,7 @@ select {
 }
 
 .banner__content {
-  width: min(41em, 100%);
+  width: min(45em, 100%);
   text-align: center;
 }
 
@@ -327,9 +327,17 @@ select {
   color: #d3d3d3;
 }
 
-/* Medium Screen Size */
-/* ---------- BANNER STYLES ---------- */
+/* ------ Banner for Article ------ */
+.banner--article {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 2),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url(../images/blog-image-adventurers.jpg);
+}
 
+/* ------ Medium Size Screens ------ */
 @media only screen and (min-width: 45em) {
   .banner__title {
     font-size: 2.369rem;
@@ -350,9 +358,7 @@ select {
   }
 }
 
-/* Large Screen Size */
-/* ---------- BANNER STYLES ---------- */
-
+/* ------ Large Size Screens ------ */
 @media only screen and (min-width: 60em) {
   .banner__title {
     font-size: 3.157rem;
@@ -373,7 +379,7 @@ select {
   }
 }
 
-/* ---------------- Card Group Styling ---------------- */
+/* ---------------- CARD GROUP ---------------- */
 
 .card-group .container {
   padding-top: 0.5rem;
@@ -431,18 +437,15 @@ select {
   padding: 0.5rem 1rem;
   margin: 0;
   color: #000;
-  /* justify-content: center; */
 }
 
 /* ------ Medium Size Screens ------ */
-/* ---------------- Card Group Styling ---------------- */
 @media only screen and (min-width: 45em) {
   .card-group .container {
     grid-template-columns: repeat(2, 1fr);
   }
 
   .card__content--left {
-    /* align-items: left;*/
     text-align: left;
   }
 
@@ -457,10 +460,10 @@ select {
 }
 
 /* ------ Large Size Screens ------ */
-/* ---------------- Card Group Styling ---------------- */
 @media only screen and (min-width: 60em) {
   .card-group .container {
     grid-template-columns: repeat(3, 1fr);
+    display: grid;
   }
 
   .card__title {
@@ -477,9 +480,9 @@ select {
   }
 }
 
-/* ---------------- Split Image Content Section ---------------- */
+/* ---------------- SPLIT IMAGE CONTENT ---------------- */
 
-.image-content .container {
+.split-image .container {
   padding-top: 3rem;
   padding-bottom: 3rem;
   align-items: center;
@@ -488,42 +491,40 @@ select {
   text-align: center;
 }
 
-.image-content__image {
+.split-image__image {
   aspect-ratio: 1 / 1;
   display: flex;
 }
 
-.image-content__image img {
+.split-image__image img {
   object-fit: cover;
 }
 
-.image-content__title {
+.split-image__title {
   font-size: 1.756rem;
   line-height: 1.3;
 }
 
+/* ------ Medium Size Screens ------ */
 @media only screen and (min-width: 45em) {
-  .image-content .container {
-    grid-template-columns: 1fr 2fr;
-  }
-
-  .image-content__title {
-    font-size: 2.069rem;
-  }
-}
-
-@media only screen and (min-width: 60em) {
-  .image-content .container {
+  .split-image .container {
     grid-template-columns: 1fr 1fr;
     text-align: left;
   }
 
-  .image-content__title {
+  .split-image__title {
+    font-size: 2.069rem;
+  }
+}
+
+/* ------ Large Size Screens ------ */
+@media only screen and (min-width: 60em) {
+  .split-image__title {
     font-size: 2.444rem;
   }
 }
 
-/* ---------- Footer Styles ---------- */
+/* ---------- FOOTER ---------- */
 
 .footer {
   background-color: #000;
@@ -570,22 +571,19 @@ select {
 }
 
 .footer__link,
-.footer__privacy-policy,
-.footer__terms-of-service,
 .footer__copyright {
   color: #fff;
   text-decoration: none;
 }
 
 .footer__link:hover,
-.footer__privacy-policy:hover,
-.footer__terms-of-service:hover,
-.footer__link:focus,
-.footer__privacy-policy:focus,
-.footer__link:focus {
+.footer__link:focus
+.footer__copyright:hover,
+.footer__copyright:focus{
   color: #36bf7f;
 }
 
+/* ------ Medium & Large Size Screens ------ */
 @media only screen and (min-width: 45em) {
   .footer .container {
     flex-direction: row;
@@ -613,5 +611,62 @@ select {
     flex-direction: column;
     margin: 0;
     padding-left: 1.5rem;
+  }
+}
+
+/* ---------- ARTICLE ---------- */
+
+.article .container {
+  display: grid;
+}
+
+.standout__title {
+  border-bottom: 0.2rem #005b41 solid;
+  border-image: linear-gradient(to right, #000 20%, transparent 20%) 100% 1;
+  padding: 1rem 0 0 1rem;
+}
+
+.article__subtitle {
+  border-bottom: 0.2rem #005b41 solid;
+  border-image: linear-gradient(to right, #000 20%, transparent 20%) 100% 1;
+  padding: 1rem 0 0 0;
+}
+
+.standout {
+  background-color: #d7cece;
+  border-radius: 1rem;
+  border-bottom: 0.2rem #005b41 solid;
+  padding: 1rem;
+}
+
+.article__content {
+  padding: 1rem;
+}
+
+/* ---------- ARTICLE RELATED POSTS ---------- */
+
+.related--articles {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: fit-content;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+@media only screen and (min-width: 45em) {
+.article .container {
+  grid-template-columns: 3fr 1fr;
+}
+
+.related--articles {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
   }
 }
