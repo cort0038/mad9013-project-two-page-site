@@ -1,7 +1,17 @@
 :root {
+  /* Spacing */
   --height: 75vh;
   --vAlign: center;
   --hAlign: flex-start;
+
+  /* Colors */
+  --color-primary: #394a59;
+  --color-primary-light: #59758d;
+  --color-secondary: #36bf7f;
+  --color-secondary-light: #75d3a7;
+  --color-secondary-dark: #1c5e3e;
+  --color-secondary-pale: #def4e9;
+  --color-accent: #d96666;
 }
 
 /* Box sizing rules */
@@ -156,6 +166,108 @@ select {
   color: #000;
 }
 
+/* ---------- Typography ---------- */
+
+h1 {
+  font-size: 2.019rem;
+  line-height: 1.3;
+}
+
+h2 {
+  font-size: 1.756rem;
+  line-height: 1.3;
+}
+
+h3 {
+  color: var(--color-secondary-dark);
+  font-size: 1.525rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+h4 {
+  font-size: 1.325rem;
+  color: var(--color-accent);
+  margin: 0;
+  line-height: 1.3;
+}
+
+h5 {
+  font-size: 1.15rem;
+  font-weight: normal;
+  line-height: 1.3;
+}
+
+h6 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+@media only screen and (min-width: 45em) {
+  h1 {
+    font-size: 2.481rem;
+  }
+  h2 {
+    font-size: 2.069rem;
+  }
+  h3 {
+    font-size: 1.725rem;
+  }
+  h4 {
+    font-size: 1.438rem;
+  }
+  h5 {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (min-width: 60em) {
+  h1 {
+    font-size: 3.056rem;
+  }
+  h2 {
+    font-size: 2.444rem;
+  }
+  h3 {
+    font-size: 1.956rem;
+    zoom: 80%;
+  }
+  h4 {
+    font-size: 1.563rem;
+  }
+  h5 {
+    font-size: 1.25rem;
+  }
+}
+
+/* To Top */
+
+.to-top {
+  position: fixed;
+  bottom: -0.5rem;
+  right: 1.5rem;
+  background-color: var(--color-secondary-dark);
+  color: var(--color-secondary-pale);
+  padding: 0.5rem 0.5rem 1rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+  text-decoration: none;
+  box-shadow: var(--shadow);
+  translate: 0 100%;
+  transition: translate var(--transition), bottom var(--transition);
+}
+
+.to-top.visible {
+  translate: 0;
+}
+
+.to-top:hover,
+.to-top:focus-visible {
+  bottom: 0;
+  color: #fff;
+  translate: 0;
+}
+
 /* Effects & Animations */
 
 .grow-effect {
@@ -206,60 +318,6 @@ select {
   -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
-
-/* FONT SIZES */
-html {font-size: 100%;} /*16px*/
-p {margin-bottom: 1rem;}
-h1, h2, h3, h4, h5 {
-  font-weight: 700;
-  line-height: 1.3;
-}
-h1 {
-  margin-top: 0;
-  font-size: 1.802rem;
-}
-h2 {font-size: 1.402rem;}
-h3 {font-size: 1.224rem;}
-h4 {font-size: 1.166rem;
-  font-weight: 400;}
-h5 {font-size: 1.125rem;}
-small, .text_small {font-size: 0.889rem;}
-
-@media only screen and (min-width: 45em) {
-  p {margin-bottom: 1rem;}
-  h1, h2, h3, h4, h5 {
-    line-height: 1.3;
-}
-  h1 {
-    margin-top: 0;
-    font-size: 2.074rem;
-}
-  h2 {font-size: 1.528rem;}
-  h3 {font-size: 1.24rem;}
-  h4 {font-size: 1.123rem;
-    font-weight: 400;}
-  h5 {font-size: 1rem;}
-  small, .text_small {font-size: 0.833rem;}
-}
-
-@media only screen and (min-width: 60em) {
-  p {margin-bottom: 1rem;
-  font-size: 1rem;}
-  h1, h2, h3, h4, h5 {
-    line-height: 1.3;
-}
-
-  h1 {
-    margin-top: 0;
-    font-size: 3.052rem;
-}
-
-  h2 {font-size: 1.753rem;}
-  h3 {font-size: 1.363rem;}
-  h4 {font-size: 1.25rem; font-weight: 400;}
-  h5 {font-size: 1rem;}
-  small, .text_small {font-size: 0.8rem;}
-  }
 
 /* ---------- NAVBAR ---------- */
 
@@ -369,6 +427,10 @@ small, .text_small {font-size: 0.889rem;}
   color: #d3d3d3;
 }
 
+.banner__title {
+  font-size: clamp(2.019rem, 4cqi, 3.056rem);
+}
+
 /* ------ Banner for Article ------ */
 .banner--article {
   background-image: linear-gradient(
@@ -381,7 +443,6 @@ small, .text_small {font-size: 0.889rem;}
 
 /* ------ Medium Size Screens ------ */
 @media only screen and (min-width: 45em) {
-
   .banner .container {
     display: flex;
     min-height: var(--height);
@@ -391,12 +452,10 @@ small, .text_small {font-size: 0.889rem;}
   .banner__content {
     text-align: left;
   }
-
 }
 
 /* ------ Large Size Screens ------ */
 @media only screen and (min-width: 60em) {
-
   .banner__content {
     text-align: left;
   }
@@ -420,6 +479,7 @@ small, .text_small {font-size: 0.889rem;}
 
 .card-group__title {
   text-align: center;
+  font-size: clamp(1.756rem, 1cqi, 2.444rem);
 }
 
 .card-group {
@@ -449,6 +509,7 @@ small, .text_small {font-size: 0.889rem;}
   line-height: 1.3;
   padding-top: 1rem;
   padding-bottom: 0;
+  font-size: clamp(1.525rem, 1cqi, 1.956rem);
 }
 
 .card__image {
@@ -483,7 +544,6 @@ small, .text_small {font-size: 0.889rem;}
   .card-group__title {
     grid-column: 1/3;
   }
-
 }
 
 /* ------ Large Size Screens ------ */
@@ -517,6 +577,10 @@ small, .text_small {font-size: 0.889rem;}
 
 .split-image__image img {
   object-fit: cover;
+}
+
+.split-image__title {
+  font-size: clamp(1.756rem, 2cqi, 2.444rem);
 }
 
 /* ------ Medium Size Screens ------ */
@@ -573,9 +637,8 @@ small, .text_small {font-size: 0.889rem;}
 }
 
 .footer__link:hover,
-.footer__link:focus
-.footer__copyright:hover,
-.footer__copyright:focus{
+.footer__link:focus .footer__copyright:hover,
+.footer__copyright:focus {
   color: #36bf7f;
 }
 
@@ -639,12 +702,12 @@ small, .text_small {font-size: 0.889rem;}
   border-radius: 1rem;
 }
 
-.article__body h3 {
-  color: #490303;
-}
-
 .article__content {
   padding: 1rem;
+}
+
+.article__content h2 {
+  font-size: clamp(1.756rem, 1cqi, 2.444rem);
 }
 
 /* ---------- ARTICLE RELATED POSTS ---------- */
@@ -653,11 +716,15 @@ small, .text_small {font-size: 0.889rem;}
   display: flex;
   flex-direction: column;
   height: fit-content;
+  margin-top: 2rem;
   margin-bottom: 2rem;
   padding: 1rem;
   border-radius: 1rem;
   background-color: #ece6e6;
   border: #000 0.3rem solid;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
 }
 
 .tag {
@@ -669,14 +736,11 @@ small, .text_small {font-size: 0.889rem;}
 }
 
 @media only screen and (min-width: 45em) {
-.article .container {
-  grid-template-columns: 3fr 1fr;
-}
+  .article .container {
+    grid-template-columns: 3fr 1fr;
+  }
 
-.related--articles {
-  margin-top: 2rem;
-  position: sticky;
-  position: -webkit-sticky;
-  top: 0;
+  .related--articles h2 {
+    font-size: clamp(1.525rem, 1cqi, 1.956rem);
   }
 }

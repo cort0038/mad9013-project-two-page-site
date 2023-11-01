@@ -2,18 +2,20 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="./CSS/main.css"/>
-    <link rel="icon" href="./images/favicon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./CSS/main.css" />
+    <link rel="icon" href="./images/favicon.svg" />
     <title>Adventure Co-Operative</title>
   </head>
   <body>
-
     <!-- NAVBAR -->
     <header class="navbar">
       <div class="container">
         <a href="./" class="navbar__logo">
-          <img src="./images/logo-ac.svg" alt="Adventure Co-Operative Logo" class="navbar__icon"/>
+          <img
+            src="./images/logo-ac.svg"
+            alt="Adventure Co-Operative Logo"
+            class="navbar__icon" />
         </a>
         <nav>
           <ul class="navbar__list">
@@ -33,12 +35,13 @@
       <div class="container">
         <div class="banner__content">
           <h1 class="banner__title">Welcome to Adventure Co-Operative!</h1>
-          <h4 class="banner__text">
+          <p class="banner__text">
             An app built for adventurers seeking fame, fortune, and a well
             organized gameplay experience!
-          <h4/>
+          </p>
           <a href="#" class="btn btn--secondary push-on-hover"
-            >Download the app!</a>
+            >Download the app!</a
+          >
         </div>
       </div>
     </section>
@@ -49,7 +52,7 @@
         <!-- Card #1 -->
         <a class="card grow-effect" href="#">
           <div class="card__image">
-            <img src="images/card-character.svg" alt="Character icon"/>
+            <img src="images/card-character.svg" alt="Character icon" />
           </div>
           <div class="card__content">
             <h2 class="card__title">Create a character!</h2>
@@ -61,7 +64,7 @@
         <!-- Card #2 -->
         <a class="card grow-effect" href="#">
           <div class="card__image">
-            <img src="images/card-party.svg" alt="Party icon"/>
+            <img src="images/card-party.svg" alt="Party icon" />
           </div>
           <div class="card__content">
             <h2 class="card__title">Form a party!</h2>
@@ -71,7 +74,7 @@
         <!-- Card #3 -->
         <a class="card grow-effect" href="#">
           <div class="card__image">
-            <img src="images/card-items.svg" alt="Items icon"/>
+            <img src="images/card-items.svg" alt="Items icon" />
           </div>
           <div class="card__content">
             <h2 class="card__title">Find an item!</h2>
@@ -107,7 +110,7 @@
     <section class="card-group">
       <div class="container">
         <div class="card-group__title">
-          <h2>Recent Blog Posts</h2>
+          <h3>Recent Blog Posts</h3>
         </div>
         <!-- Post/Card #1 -->
         <a class="card grow-effect" target="_blank" href="blog-post.html">
@@ -144,7 +147,10 @@
     <footer class="footer">
       <div class="container">
         <a href="./" class="footer__logo">
-          <img src="./images/logo-ac.svg" alt="Adventure Co-Operative Logo" class="footer__icon"/>
+          <img
+            src="./images/logo-ac.svg"
+            alt="Adventure Co-Operative Logo"
+            class="footer__icon" />
         </a>
         <nav class="footer__nav">
           <ul class="footer__list">
@@ -155,11 +161,17 @@
           </ul>
         </nav>
         <ul class="footer__legal">
-          <li><p class="footer__copyright">&copy; 2023 Adventure Co-Operative</p></li>
+          <li>
+            <p class="footer__copyright">&copy; 2023 Adventure Co-Operative</p>
+          </li>
           <li><a href="#" class="footer__link">Privacy Policy</a></li>
           <li><a href="#" class="footer__link">Terms of Service</a></li>
         </ul>
       </div>
     </footer>
+    <!-- Accessibility feature: return to top button -->
+    <a href="#" class="to-top">To Top</a>
+    <!-- Loads custom JavaScript file -->
+    <script src="./js/main.js"></script>
   </body>
 </html>
