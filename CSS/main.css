@@ -5,7 +5,7 @@
   --hAlign: flex-start;
 
   /* Colors */
-  --color-primary: #394a59;
+  --color-primary: #0157a3;
   --color-primary-light: #59758d;
   --color-secondary: #36bf7f;
   --color-secondary-light: #75d3a7;
@@ -65,13 +65,13 @@ ol[role="list"] {
 /* A elements that don't have a class get default styles */
 a {
   text-decoration-skip-ink: auto;
-  color: #33a06d;
+  color: var(--color-primary);
   text-decoration: none;
 }
 
 a:hover,
 a:focus-visible {
-  color: #75d3a7;
+  color: var(--color-accent);
 }
 
 nav {
