@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./CSS/main.css" />
     <link rel="icon" href="./images/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet" />
     <title>Adventure Co-Operative</title>
   </head>
   <body>
@@ -22,127 +27,127 @@
             <li><a href="#" class="navbar__link">About</a></li>
             <li><a href="#" class="navbar__link">Blog</a></li>
             <li><a href="#" class="navbar__link">Download</a></li>
-            <li>
-              <a href="#" class="navbar__link navbar__link--details">Sign Up</a>
-            </li>
+            <li><a href="#" class="navbar__link">Sign Up</a></li>
           </ul>
         </nav>
       </div>
     </header>
-
-    <!-- BANNER -->
-    <section class="banner">
-      <div class="container">
-        <div class="banner__content">
-          <h1 class="banner__title">Welcome to Adventure Co-Operative!</h1>
-          <p class="banner__text">
-            An app built for adventurers seeking fame, fortune, and a well
-            organized gameplay experience!
-          </p>
-          <a href="#" class="btn btn--secondary push-on-hover"
-            >Download the app!</a
-          >
-        </div>
-      </div>
-    </section>
-
-    <!-- CARD GROUP -->
-    <section class="card-group">
-      <div class="container">
-        <!-- Card #1 -->
-        <a class="card grow-effect" href="#">
-          <div class="card__image">
-            <img src="images/card-character.svg" alt="Character icon" />
-          </div>
-          <div class="card__content">
-            <h2 class="card__title">Create a character!</h2>
-            <p class="card__text">
-              Get started with your very first character.
+    <main id="main">
+      <!-- BANNER -->
+      <section class="banner">
+        <div class="container">
+          <div class="banner__content">
+            <h1 class="banner__title">Welcome to Adventure Co-Operative!</h1>
+            <p class="banner__text">
+              An app built for adventurers seeking fame, fortune, and a well
+              organized gameplay experience!
             </p>
+            <a href="#" class="btn btn--secondary push-on-hover"
+              >Download the app!</a
+            >
           </div>
-        </a>
-        <!-- Card #2 -->
-        <a class="card grow-effect" href="#">
-          <div class="card__image">
-            <img src="images/card-party.svg" alt="Party icon" />
+        </div>
+      </section>
+
+      <!-- HOMECARD GROUP -->
+      <section class="card-group">
+        <div class="container">
+          <!-- Card #1 -->
+          <a class="card grow-effect" href="#">
+            <div class="card__image">
+              <img src="images/card-character.svg" alt="Character icon" />
+            </div>
+            <div class="card__content">
+              <h2 class="card__title">Create a character!</h2>
+              <p class="card__text">
+                Get started with your very first character.
+              </p>
+            </div>
+          </a>
+          <!-- Card #2 -->
+          <a class="card grow-effect" href="#">
+            <div class="card__image">
+              <img src="images/card-party.svg" alt="Party icon" />
+            </div>
+            <div class="card__content">
+              <h2 class="card__title">Form a party!</h2>
+              <p class="card__text">Connect with friends and team up.</p>
+            </div>
+          </a>
+          <!-- Card #3 -->
+          <a class="card grow-effect" href="#">
+            <div class="card__image">
+              <img src="images/card-items.svg" alt="Items icon" />
+            </div>
+            <div class="card__content">
+              <h2 class="card__title">Find an item!</h2>
+              <p class="card__text">
+                Add fantastic items to boost your character.
+              </p>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- SPLIT IMAGE CONTENT -->
+      <section class="split-image">
+        <div class="container">
+          <div class="split-image__image">
+            <img
+              src="images/about.jpg"
+              alt="Knights with armor riding horses" />
           </div>
-          <div class="card__content">
-            <h2 class="card__title">Form a party!</h2>
-            <p class="card__text">Connect with friends and team up.</p>
-          </div>
-        </a>
-        <!-- Card #3 -->
-        <a class="card grow-effect" href="#">
-          <div class="card__image">
-            <img src="images/card-items.svg" alt="Items icon" />
-          </div>
-          <div class="card__content">
-            <h2 class="card__title">Find an item!</h2>
-            <p class="card__text">
-              Add fantastic items to boost your character.
+          <div class="split-image__content">
+            <h2 class="split-image__title">About Adventure Co.</h2>
+            <p class="split-image__text">
+              Adventure Co. is a cooperative storytelling companion for D&D that
+              uses your imagination and invites you to adventure, battle,
+              discover, and complete epic quests with your friends through an
+              immersive RPG experience. Your first adventure is only a dice roll
+              away!
             </p>
+            <a href="#" class="btn push-on-hover">Learn more</a>
           </div>
-        </a>
-      </div>
-    </section>
-
-    <!-- SPLIT IMAGE CONTENT -->
-    <section class="split-image">
-      <div class="container">
-        <div class="split-image__image">
-          <img src="images/about.jpg" alt="Knights with armor riding horses" />
         </div>
-        <div class="split-image__content">
-          <h2 class="split-image__title">About Adventure Co.</h2>
-          <p class="split-image__text">
-            Adventure Co. is a cooperative storytelling companion for D&D that
-            uses your imagination and invites you to adventure, battle,
-            discover, and complete epic quests with your friends through an
-            immersive RPG experience. Your first adventure is only a dice roll
-            away!
-          </p>
-          <a href="#" class="btn push-on-hover">Learn more</a>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- RECENT BLOG POSTS -->
-    <section class="card-group">
-      <div class="container">
-        <div class="card-group__title">
-          <h3>Recent Blog Posts</h3>
+      <!-- RECENT BLOG POSTS -->
+      <section class="card-group">
+        <div class="container">
+          <div class="card-group__title">
+            <h2>Recent Blog Posts</h2>
+          </div>
+          <!-- Post/Card #1 -->
+          <a class="card grow-effect" target="_blank" href="blog-post.html">
+            <div class="card__content card__content--left">
+              <h3 class="card__title">
+                One-Shot Adventures: What They Are, Why We Love Them, and
+                Recommendations
+              </h3>
+              <p class="card__text">By Mike Bernier</p>
+            </div>
+          </a>
+          <!-- Post/Card #2 -->
+          <a class="card grow-effect" href="#">
+            <div class="card__content card__content--left">
+              <h3 class="card__title">
+                5 Tips for Running the Death House One-Shot From Curse of Strahd
+              </h3>
+              <p class="card__text">by Jeremy Blum</p>
+            </div>
+          </a>
+          <!-- Post/Card #3 -->
+          <a class="card grow-effect" href="#">
+            <div class="card__content card__content--left">
+              <h3 class="card__title">
+                How to Mashup D&D Sourcebooks for Versatile Storytelling
+              </h3>
+              <p class="card__text">by Riley Silverman</p>
+            </div>
+          </a>
         </div>
-        <!-- Post/Card #1 -->
-        <a class="card grow-effect" target="_blank" href="blog-post.html">
-          <div class="card__content card__content--left">
-            <h3 class="card__title">
-              One-Shot Adventures: What They Are, Why We Love Them, and
-              Recommendations
-            </h3>
-            <p class="card__text">By Mike Bernier</p>
-          </div>
-        </a>
-        <!-- Post/Card #2 -->
-        <a class="card grow-effect" href="#">
-          <div class="card__content card__content--left">
-            <h3 class="card__title">
-              5 Tips for Running the Death House One-Shot From Curse of Strahd
-            </h3>
-            <p class="card__text">by Jeremy Blum</p>
-          </div>
-        </a>
-        <!-- Post/Card #3 -->
-        <a class="card grow-effect" href="#">
-          <div class="card__content card__content--left">
-            <h3 class="card__title">
-              How to Mashup D&D Sourcebooks for Versatile Storytelling
-            </h3>
-            <p class="card__text">by Riley Silverman</p>
-          </div>
-        </a>
-      </div>
-    </section>
-
+      </section>
+    </main>
     <!-- FOOTER -->
     <footer class="footer">
       <div class="container">

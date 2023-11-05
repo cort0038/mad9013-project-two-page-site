@@ -1,0 +1,16 @@
+{
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "notebook.formatOnSave.enabled": true,
+  "notebook.formatOnCellExecution": true,
+  "yaml.format.enable": false,
+  "javascript.format.enable": false,
+  "typescript.format.enable": false,
+  "json.format.enable": false,
+  "java.format.enabled": false,
+  "html.format.enable": false,
+  "scss.format.enable": false,
+  "less.format.enable": false,
+  "css.format.enable": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+}

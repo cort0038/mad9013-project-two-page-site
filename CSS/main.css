@@ -1,6 +1,8 @@
+/* CSS Custom Properties  */
+
 :root {
   /* Spacing */
-  --height: 75vh;
+  --height: 40vh;
   --vAlign: center;
   --hAlign: flex-start;
 
@@ -11,8 +13,20 @@
   --color-secondary-light: #75d3a7;
   --color-secondary-dark: #1c5e3e;
   --color-secondary-pale: #def4e9;
-  --color-accent: #d96666;
+  --color-accent: #082ce2;
+  --color-acent-secondary: #490303;
+
+  /* Fonts */
+
+  --font-primary: "Alegreya Sans", sans-serif;
+
+  /* Sizing */
+
+  --container: 65em;
+  --container-text: 45em;
 }
+
+/* -------- CSS RESET -------- */
 
 /* Box sizing rules */
 *,
@@ -24,12 +38,7 @@
 /* Set core root defaults */
 html {
   line-height: 1.5;
-  font-family: Roboto, sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue";
-}
-
-html:focus-within {
-  scroll-behavior: smooth;
+  font-family: var(--font-primary);
 }
 
 /* Set core body defaults */
@@ -60,18 +69,20 @@ dd {
 ul[role="list"],
 ol[role="list"] {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 /* A elements that don't have a class get default styles */
-a {
+a:not([class]) {
   text-decoration-skip-ink: auto;
   color: var(--color-primary);
   text-decoration: none;
 }
 
-a:hover,
-a:focus-visible {
-  color: var(--color-accent);
+a:not([class]):hover,
+a:not([class]):focus-visible {
+  color: var(--color-primary-light);
 }
 
 nav {
@@ -120,14 +131,14 @@ select {
 /* ---------- Containers ---------- */
 
 .container {
-  width: min(65em, 100%);
+  width: min(100%, var(--container));
   margin: 0 auto;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
 
 .container--text {
-  width: min(45em, 100%);
+  width: min(100%, var(--container-text));
 }
 
 /* ---------- Buttons ---------- */
@@ -135,8 +146,8 @@ select {
 .btn {
   display: inline-block;
   padding: 0.55em 1.5em 0.5em;
-  background-color: #005b41;
-  border: 0.125rem solid #005b41;
+  background-color: var(--color-secondary-dark);
+  border: 0.125rem solid var(--color-secondary-dark);
   color: #fff;
   border-radius: 0.25em;
   text-decoration: none;
@@ -147,53 +158,55 @@ select {
 
 .btn:hover,
 .btn:focus-visible {
-  background-color: #33a06d;
-  border-color: #33a06d;
+  background-color: var(--color-secondary);
+  border-color: var(--color-secondary);
   color: #fff;
 }
 
 .btn--secondary {
-  background-color: #32d3d8;
-  border-color: #32d3d8;
+  background-color: var(--color-secondary-light);
+  border-color: var(--color-secondary-light);
   color: #000;
   font-weight: 500;
 }
 
 .btn--secondary:hover,
 .btn--secondary:focus-visible {
-  background-color: #75d3a7;
-  border-color: #75d3a7;
+  background-color: var(--color-secondary-pale);
+  border-color: var(--color-secondary-pale);
   color: #000;
 }
 
 /* ---------- Typography ---------- */
 
 h1 {
-  font-size: 2.019rem;
+  font-size: 1.802rem;
   line-height: 1.3;
 }
 
 h2 {
-  font-size: 1.756rem;
+  font-size: 1.602rem;
   line-height: 1.3;
+  color: var(--color-acent-secondary);
+  padding-top: 1rem;
 }
 
 h3 {
   color: var(--color-secondary-dark);
-  font-size: 1.525rem;
+  font-size: 1.424rem;
   margin-bottom: 0.5rem;
   line-height: 1.3;
 }
 
 h4 {
-  font-size: 1.325rem;
+  font-size: 1.266rem;
   color: var(--color-accent);
-  margin: 0;
+  margin-bottom: 0;
   line-height: 1.3;
 }
 
 h5 {
-  font-size: 1.15rem;
+  font-size: 1.125rem;
   font-weight: normal;
   line-height: 1.3;
 }
@@ -204,40 +217,58 @@ h6 {
   margin-bottom: 0.5rem;
 }
 
-@media only screen and (min-width: 45em) {
-  h1 {
-    font-size: 2.481rem;
-  }
-  h2 {
-    font-size: 2.069rem;
-  }
-  h3 {
-    font-size: 1.725rem;
-  }
-  h4 {
-    font-size: 1.438rem;
-  }
-  h5 {
-    font-size: 1.2rem;
-  }
+small {
+  font-size: 0.889rem;
 }
 
-@media only screen and (min-width: 60em) {
+@media only screen and (min-width: 45em) {
+  html {
+    font-size: 110%;
+  }
+
   h1 {
-    font-size: 3.056rem;
+    font-size: 3.052rem;
   }
   h2 {
-    font-size: 2.444rem;
+    font-size: 2.441rem;
   }
   h3 {
-    font-size: 1.956rem;
-    zoom: 80%;
+    font-size: 1.953rem;
   }
   h4 {
     font-size: 1.563rem;
   }
   h5 {
     font-size: 1.25rem;
+  }
+
+  small {
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (min-width: 60em) {
+  html {
+    font-size: 120%;
+  }
+  h1 {
+    font-size: 4.209rem;
+  }
+  h2 {
+    font-size: 3.157rem;
+  }
+  h3 {
+    font-size: 2.369rem;
+  }
+  h4 {
+    font-size: 1.777rem;
+  }
+  h5 {
+    font-size: 1.333rem;
+  }
+
+  small {
+    font-size: 0.75rem;
   }
 }
 
@@ -347,6 +378,7 @@ h6 {
   list-style-type: none;
   width: 100%;
   padding: 0;
+  align-items: center;
 }
 
 .navbar__link {
@@ -375,6 +407,8 @@ h6 {
     justify-content: space-between;
     margin-top: 0;
     display: flex;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .navbar__icon {
@@ -411,24 +445,36 @@ h6 {
 
 .banner .container {
   display: flex;
-  min-height: 40vh;
+  min-height: var(--height);
   align-items: var(--vAlign);
   justify-content: var(--hAlign);
   padding: 3rem 1.5rem;
 }
 
+.tag {
+  background-color: var(--color-secondary-dark);
+  color: #fff;
+  padding: 0.1rem;
+  text-decoration: none;
+}
+
+.tag:hover,
+.tag:focus-visible {
+  background-color: var(--color-secondary);
+  color: #fff;
+}
+
 .banner__content {
   width: min(45em, 100%);
-  text-align: center;
   color: #fff;
 }
 
 .banner__text {
-  color: #d3d3d3;
+  color: #fff;
 }
 
 .banner__title {
-  font-size: clamp(2.019rem, 4cqi, 3.056rem);
+  font-size: clamp(2.019rem, 5cqi, 3.056rem);
 }
 
 /* ------ Banner for Article ------ */
@@ -441,29 +487,9 @@ h6 {
     url(../images/blog-image-adventurers.jpg);
 }
 
-/* ------ Medium Size Screens ------ */
 @media only screen and (min-width: 45em) {
   .banner .container {
-    display: flex;
-    min-height: var(--height);
-    align-items: var(--vAlign);
-  }
-
-  .banner__content {
-    text-align: left;
-  }
-}
-
-/* ------ Large Size Screens ------ */
-@media only screen and (min-width: 60em) {
-  .banner__content {
-    text-align: left;
-  }
-
-  .banner .container {
-    display: flex;
-    min-height: var(--height);
-    align-items: var(--vAlign);
+    --height: 75vh;
   }
 }
 
@@ -477,21 +503,14 @@ h6 {
   grid-gap: 1rem;
 }
 
-.card-group__title {
-  text-align: center;
-  font-size: clamp(1.756rem, 1cqi, 2.444rem);
-}
-
 .card-group {
-  background-color: #def4e9;
+  background-color: var(--color-secondary-pale);
   padding: 3rem 1rem 4rem 1rem;
 }
 
-.card__content {
-  padding-bottom: 1rem;
-  display: flex;
-  flex-direction: column;
+.card-group__title {
   text-align: center;
+  font-size: clamp(1.756rem, 2cqi, 2.444rem);
 }
 
 .card {
@@ -500,16 +519,7 @@ h6 {
   box-shadow: 0 0.25rem 0.5rem #0002, 0 0.25rem 0.75rem #0002;
   overflow: hidden;
   color: inherit;
-}
-
-.card__title {
-  color: #490303;
-  padding: 0.5rem 1rem;
-  margin: 0;
-  line-height: 1.3;
-  padding-top: 1rem;
-  padding-bottom: 0;
-  font-size: clamp(1.525rem, 1cqi, 1.956rem);
+  text-decoration: none;
 }
 
 .card__image {
@@ -525,6 +535,27 @@ h6 {
   aspect-ratio: 1 / 1;
 }
 
+.card__title {
+  color: var(--color-accent);
+  padding: 0.5rem 1rem;
+  margin: 0;
+  line-height: 1.3;
+  padding-top: 1rem;
+  padding-bottom: 0;
+  font-size: clamp(1.525rem, 1.5cqi, 1.956rem);
+}
+
+.card__content {
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.card__content--left {
+  text-align: left;
+}
+
 .card__text {
   padding: 0.5rem 1rem;
   margin: 0;
@@ -535,10 +566,6 @@ h6 {
 @media only screen and (min-width: 45em) {
   .card-group .container {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .card__content--left {
-    text-align: left;
   }
 
   .card-group__title {
@@ -560,12 +587,15 @@ h6 {
 /* ---------------- SPLIT IMAGE CONTENT ---------------- */
 
 .split-image .container {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  align-items: center;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  align-items: var(--vAlign);
   display: grid;
   gap: 3rem;
-  text-align: center;
+}
+
+.split-image {
+  padding: 3rem 1rem 4rem 1rem;
 }
 
 .split-image__image {
@@ -580,14 +610,144 @@ h6 {
 }
 
 .split-image__title {
-  font-size: clamp(1.756rem, 2cqi, 2.444rem);
+  font-size: clamp(1.756rem, 4cqi, 2.444rem);
 }
 
 /* ------ Medium Size Screens ------ */
 @media only screen and (min-width: 45em) {
   .split-image .container {
     grid-template-columns: 1fr 1fr;
-    text-align: left;
+  }
+}
+
+/* ---------- ARTICLE ---------- */
+
+.article .container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.standout {
+  background-color: var(--color-secondary-pale);
+  border-radius: 1rem;
+  border-bottom: 0.2rem var(--color-secondary-dark) solid;
+  padding: 1rem 1rem 1rem 1rem;
+}
+
+.standout__title,
+.article__subtitle {
+  border-bottom: 0.2rem var(--color-secondary-dark) solid;
+  border-image: linear-gradient(
+      to right,
+      var(--color-secondary-dark) 20%,
+      transparent 20%
+    )
+    100% 1;
+  font-size: clamp(1.756rem, 2cqi, 2.444rem);
+}
+
+.article__subtitle-2 {
+  font-size: clamp(1.525rem, 1.5cqi, 1.956rem);
+}
+
+.article__body img {
+  border-radius: 1rem;
+}
+
+.article__content {
+  padding: 1rem;
+}
+
+/* ---------- ARTICLE SIDEBAR ---------- */
+
+.sidebar {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.sidebar .card-group {
+  background-color: var(--color-secondary-pale);
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: 1fr;
+  grid-gap: 0.5rem;
+  border-radius: 2rem;
+  border: 0.1rem solid #000;
+  overflow: hidden;
+}
+
+.sidebar .card {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.25rem 0.5rem #0002, 0 0.25rem 0.75rem #0002;
+  overflow: hidden;
+  color: inherit;
+  text-decoration: none;
+}
+
+.sidebar .card-group__title {
+  text-align: center;
+  font-size: clamp(1.756rem, 2cqi, 2.444rem);
+}
+
+.sidebar .card__title {
+  color: var(--color-accent);
+  padding: 0.5rem 1rem;
+  margin: 0;
+  line-height: 1.3;
+  padding-top: 1rem;
+  padding-bottom: 0;
+  font-size: clamp(1.525rem, 1.5cqi, 1.956rem);
+}
+
+.sidebar .card__content {
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar .card__text {
+  padding: 0.5rem 1rem;
+  margin: 0;
+  color: #000;
+}
+
+/* ------ Medium Size Screens ------ */
+@media only screen and (min-width: 45em) {
+  .sidebar .card-group {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sidebar .card-group__title {
+    grid-column: 1/3;
+  }
+}
+
+/* ------ Large Size Screens ------ */
+@media only screen and (min-width: 60em) {
+  .article .container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .sidebar {
+    height: fit-content;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    gap: 1.5rem;
+  }
+
+  .sidebar .card-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sidebar .card__content {
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -670,77 +830,5 @@ h6 {
     flex-direction: column;
     margin: 0;
     padding-left: 1.5rem;
-  }
-}
-
-/* ---------- ARTICLE ---------- */
-
-.article .container {
-  display: grid;
-}
-
-.standout__title {
-  border-bottom: 0.2rem #005b41 solid;
-  border-image: linear-gradient(to right, #005b41 20%, transparent 20%) 100% 1;
-  padding: 1rem 0 0 1rem;
-}
-
-.article__subtitle {
-  border-bottom: 0.2rem #005b41 solid;
-  border-image: linear-gradient(to right, #005b41 20%, transparent 20%) 100% 1;
-  padding: 1rem 0 0 0;
-}
-
-.standout {
-  background-color: #d7cece;
-  border-radius: 1rem;
-  border-bottom: 0.2rem #005b41 solid;
-  padding: 1rem;
-}
-
-.article__body img {
-  border-radius: 1rem;
-}
-
-.article__content {
-  padding: 1rem;
-}
-
-.article__content h2 {
-  font-size: clamp(1.756rem, 1cqi, 2.444rem);
-}
-
-/* ---------- ARTICLE RELATED POSTS ---------- */
-
-.related--articles {
-  display: flex;
-  flex-direction: column;
-  height: fit-content;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  padding: 1rem;
-  border-radius: 1rem;
-  background-color: #ece6e6;
-  border: #000 0.3rem solid;
-  position: sticky;
-  position: -webkit-sticky;
-  top: 0;
-}
-
-.tag {
-  background-color: #005b41;
-  color: #fff;
-  padding: 0.2rem;
-  border-radius: 0.2rem;
-  margin-bottom: 0.5rem;
-}
-
-@media only screen and (min-width: 45em) {
-  .article .container {
-    grid-template-columns: 3fr 1fr;
-  }
-
-  .related--articles h2 {
-    font-size: clamp(1.525rem, 1cqi, 1.956rem);
   }
 }
