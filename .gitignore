@@ -35,6 +35,7 @@ Temporary Items
 # iCloud generated files
 *.icloud
 
+
 ### VisualStudioCode ###
 .vscode/*
 !.vscode/settings.json
