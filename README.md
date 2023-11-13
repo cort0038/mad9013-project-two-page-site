@@ -2,7 +2,7 @@
 
 <h2>About the project</h2>
 
-  <p>This website is build using pure HTML and CSS from scratch. The CSS includes the use of flexbox, grids layouts, animations and transitions.</p>
+  <p>This website was built using pure HTML and CSS from scratch. The CSS includes the use of flexbox, grids layouts, animations and transitions.</p>
 
 <h3>Credits</h3>
 <p>Design by <a href='https://adamrobillard.ca/'>Adam Robillard</a>
