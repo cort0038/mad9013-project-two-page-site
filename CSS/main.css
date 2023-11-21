@@ -9,6 +9,11 @@
   /* Colors */
   --color-primary: #0157a3;
   --color-primary-light: #59758d;
+  /* ---------- prof comment ----------
+  
+  you should be using a fully new and unique color scheme!
+  
+  ---------- end prof comment ---------- */
   --color-secondary: #36bf7f;
   --color-secondary-light: #75d3a7;
   --color-secondary-dark: #1c5e3e;
@@ -332,6 +337,11 @@ small {
 .push-on-hover {
   display: inline-block;
   vertical-align: middle;
+  /* ---------- prof comment ----------
+  
+  No `px`!
+  
+  ---------- end prof comment ---------- */
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
@@ -559,6 +569,20 @@ small {
 
   .card-group__title {
     grid-column: 1/3;
+    /* ---------- prof comment ----------
+    
+    zoom is a non-standard property that is not
+    supported across all browsers and should not
+    be used.
+
+    https://developer.mozilla.org/en-US/docs/Web/CSS/zoom
+
+    It appears that your intent is to use it to create
+    responsive type styles. You should be doing this
+    with the techniques we discussed in class. If you
+    need a refresher, review the Week 4 tutorial.
+    
+    ---------- end prof comment ---------- */
     zoom: 80%;
   }
 }

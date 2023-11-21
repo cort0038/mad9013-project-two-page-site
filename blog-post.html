@@ -10,6 +10,10 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
       rel="stylesheet" />
+    <!-- prof comment
+      title should unique from other pages and describe the content of the page.
+      For example: "One-Shot Adventures | Adventure Co-Operative"
+    -->
     <title>Adventure Co-Operative</title>
   </head>
   <body>
@@ -36,6 +40,14 @@
     </header>
 
     <main id="main">
+
+      <!-- prof comment
+        missing open <article>
+
+          because of the article, you should use <header>
+          not <section> for the banner as it introduces the
+          article content
+      -->
       <!-- BANNER -->
       <section class="banner banner--article">
         <div class="container">
@@ -51,6 +63,14 @@
                 href="https://www.dndbeyond.com/posts/1300-one-shot-adventures-what-they-are-why-we-love-them"
                 >DnDBeyond</a
               >
+              <!-- prof comment
+                <br> should only be used when a line break is semantically important to the content.
+                For example in a poem, song lyrics, or address.
+
+                If you are finding you need to it put content on separate lines, that is an indication
+                that your html may be incorrect, or you need to update your styles. In this case, you
+                should update the html. Put the tags in a list outside of the .banner__text
+              -->
               <br />
               Tags:
               <a
@@ -85,6 +105,9 @@
               wants to try their hardest to brutally kill the characters one by
               one? Whatever avenue you're looking to explore with your one-shot,
               it can make for a fun night of gaming!<br /><br />
+              <!-- prof comment
+                Don't use <br>! Separate the content into separate <p>
+              -->
               In this article, we're paying homage to one-shot adventures in
               D&D. We'll discuss why we love them, some tips for running them,
               and our favorite one-shot adventures!
@@ -98,6 +121,9 @@
                   the tight turnaround time. One-shot adventures are usually
                   meant to be self-contained, not needing any context from
                   outside of the adventure to be run. <br /><br />
+                  <!-- prof comment
+                    remove <br>
+                  -->
                 </p>
               </div>
             </div>
@@ -109,6 +135,9 @@
                 builds and personalities, while DMs don't have to worry about
                 managing a campaign, keeping notes, or writing a continuous
                 narrative.
+                <!-- prof comment
+                Don't use <br>! Separate the content into separate <p>
+              -->
                 <br /><br />Seeing as one-shots lack the commitment of an
                 extended campaign, they provide a number of unique benefits:
               </p>
@@ -118,19 +147,30 @@
               daunting for a new DM, one-session adventures that don't require
               as much backstory, planning, and management are excellent ways to
               gain experience. One of the most prominent benefits of this is
-              that it gives your table's "forever DM" a break. <br /><br />While
+              that it gives your table's "forever DM" a break.
+              <!-- prof comment
+                Don't use <br>! Separate the content into separate <p>
+              -->
+              <br /><br />While
               switching up DMs is one of the best ways to experience a different
               table dynamic, switching party roles can be another way to
               completely change the feel of your game. Maybe your peaceful
               cleric is tired of healing your party and wants to rage as a
               barbarian? Or maybe your warlock wants to go on the straight and
               narrow with a paladin?<br /><br />
+              <!-- prof comment
+                you also should not use <br> to increase space between elements.
+                Use margin in CSS
+              -->
               <h3 class="article__subtitle-2">Try New Things</h3>
               If you're anything like me, you have 10 janky character builds
               ready to go at all times. One-shots are the perfect time to try
               out your new creations without the stakes of being stuck with the
               same character for 100 sessions (or until they meet their untimely
               demise).
+              <!-- prof comment
+                Don't use <br>! Separate the content into separate <p>
+              -->
               <br /><br />This can also allow you to experiment with different
               campaign settings. If your group is used to playing in a
               traditional fantasy setting, one-shots are an excellent way to
@@ -144,6 +184,10 @@
               could be an ideal starting point for tables looking to experience
               unique takes on fantasy while sticking to the one-session
               adventure format. <br /><br />
+              <!-- prof comment
+                you also should not use <br> to increase space between elements.
+                Use margin in CSS
+              -->
               <h3 class="article__subtitle-2">Play D&D Without the Strings</h3>
               <p>
                 Agreeing to play D&D usually comes with a commitment. If your
@@ -151,7 +195,11 @@
                 eight) to D&D, one-shots are the perfect option to get some game
                 time while you have everyone together. If you're hanging out
                 with friends and looking for something to do, a one-shot is much
-                easier to put together than a campaign! <br /><br />One-shots
+                easier to put together than a campaign!
+                <!-- prof comment
+                  Don't use <br>! Separate the content into separate <p>
+                -->
+                <br /><br />One-shots
                 are also a great way to introduce new players to the game. The
                 focus on straightforward gameplay will help streamline the
                 player's learning, and the reduced obligation can make things
@@ -191,7 +239,11 @@
                 oversight than your typical session. In a regular campaign, if
                 the players get off the rails and spend hours adopting a group
                 of goblins, it's no big deal and can even make for a funny
-                improv session. <br /><br />On the other hand, one-shots need to
+                improv session.
+                <!-- prof comment
+                  Don't use <br>! Separate the content into separate <p>
+                -->
+                <br /><br />On the other hand, one-shots need to
                 stay on track, or they will take longer than the single
                 prescribed session. As long as there aren't any restrictions
                 with your table, it's usually not a huge deal if your one-shot
@@ -200,12 +252,18 @@
                 <br />
               </p>
               <h3 class="article__subtitle-2">Keep the Intro Short</h3>
+              <!-- prof comment
+                missing <p>
+              -->
               When time is of the essence, introducing characters and
               establishing the story needs to be fast-forwarded compared to a
               long-term campaign. If it takes the party an hour to describe
               their characters, decide if they want to work together, then
               negotiate their contract, you'll probably have to cut things from
               your planned adventure.
+              <!-- prof comment
+                Don't use <br>! Separate the content into separate <p>
+              -->
               <br /><br />I've found an excellent method of expediting this
               process is to send players the introduction for the adventure
               ahead of time. I ask them to brainstorm ahead of time how their
@@ -218,12 +276,20 @@
                 Combat is usually the most time-consuming element of D&D. While
                 it can be fun for players to test their character's abilities,
                 the last few rounds of combat can drag on if the battle is
-                wildly in favor of the party. <br /><br />The best way to reduce
+                wildly in favor of the party.
+                <!-- prof comment
+                  Don't use <br>! Separate the content into separate <p>
+                -->
+                <br /><br />The best way to reduce
                 the time investment required for combat is to set a "retreat
                 scenario" for the party's opposition. Maybe the bandits your
                 party is facing will run if their leader is killed? Or perhaps
                 an owlbear with less than half of its hit points can be scared
-                away with a Charisma (Intimidation) check? <br /><br />Having
+                away with a Charisma (Intimidation) check?
+                <!-- prof comment
+                  Don't use <br>! Separate the content into separate <p>
+                -->
+                <br /><br />Having
                 alternate win conditions for combat allows the party to still
                 feel satisfied with their victory while giving you more time for
                 social interactions and exploration!
@@ -239,6 +305,9 @@
                 Barbarians might love an entire session of crushing their foes,
                 but maybe the rogue wants to do some sneaking while the bard
                 chats up a bartender for information?
+                <!-- prof comment
+                  Don't use <br>! Separate the content into separate <p>
+                -->
                 <br /><br />Including the three core aspects of D&D gameplay in
                 a one-shot makes for a good one-shot, but a great one-shot
                 intersperses these scenarios throughout the adventure to avoid
@@ -294,6 +363,12 @@
                 has to escape a ship being attacked by a kraken that I am
                 particularly fond of.
               </p>
+
+              <!-- prof comment
+                as you class name suggests, the element
+                below should be <footer> as it is the footer
+                for the article.
+              -->
               <p class="article__footer standout">
                 Mike Bernier (<a
                   class="article__link"
@@ -318,6 +393,9 @@
           <div class="sidebar">
             <div class="card-group">
               <div class="card-group__title">
+                <!-- prof comment
+                  should be h2
+                -->
                 <h3>Related Blog Posts</h3>
               </div>
               <!-- Post #1 -->
